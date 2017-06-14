@@ -1,0 +1,25 @@
+body {
+    font-family: 'Segoe UI', Helvetica, sans-serif;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    width: 800px;
+    margin: 0 auto;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    min-height: 100%;
+    padding: 1em;
+}
+    
+.sneaky {
+    display: none;
+}
