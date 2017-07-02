@@ -12,8 +12,8 @@ def get_db():
     c.execute("INSERT INTO data VALUES ('foo', 'bar')")
     c.execute("INSERT INTO data VALUES ('domain', '2600.london')")
     c.execute("INSERT INTO data VALUES ('gtrf', 'stabbed')")
-    c.execute('CREATE TABLE flag (here_it_is text)')
-    c.execute("INSERT INTO flag VALUES ('FIFTH_FLAG_HERE')")
+    c.execute('CREATE TABLE oh_look_a_flag_table (here_it_is text)')
+    c.execute("INSERT INTO oh_look_a_flag_table VALUES ('FIFTH_FLAG_HERE')")
     conn.commit()
     return conn
 
