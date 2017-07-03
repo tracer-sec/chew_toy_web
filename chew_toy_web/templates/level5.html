@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/level5/login" method="post">
+    <label>Username</label>
+    <input type="text" name="username">
+    <label>Password</label>
+    <input type="password" name="password">
+    <input type="submit">
+</form>
+<form action="/level5" method="post">
+    <label>To</label>
+    <input type="text" name="to">
+    <label>Message</label>
+    <input type="text" name="message">
+    <input type="submit">
+</form>
+<ul>
+    {% for message in result %}
+        <li>
+            <p>{{ message.from }}</p>
+            <div>{{ message.message|safe }}</div>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
