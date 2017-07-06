@@ -1,4 +1,4 @@
-from chew_toy_web import app
+from chew_toy_web import app, instance_id
 from flask import render_template, request, session, redirect
 import os
 import sqlite3
@@ -11,8 +11,9 @@ import threading
 # PhantomJS?
 
 def get_db():
-    creating = not os.path.isfile('level5.db')
-    conn = sqlite3.connect('level5.db')
+    filename = 'level5_' + instance_id + '.db'
+    creating = not os.path.isfile(filename)
+    conn = sqlite3.connect(filename)
     if creating:
         c = conn.cursor()
         c.execute('CREATE TABLE users (username TEXT, password TEXT, admin INTEGER)')
