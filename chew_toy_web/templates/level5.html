@@ -1,5 +1,10 @@
 {% extends "layout.html" %}
 {% block content %}
+{% if username == '' %}
+<p>
+To log in as a guest, use the username 'guest' and a blank password. If you 
+have any questions, send a message to 'admin'.
+</p>
 <form action="/level5/login" method="post">
     <label>Username</label>
     <input type="text" name="username">
@@ -7,6 +12,11 @@
     <input type="password" name="password">
     <input type="submit">
 </form>
+{% else %}
+<p>You are logged in as {{ username }}.</p>
+{% if posted %}
+<p>Message posted! <a href="/level5">Post another?</a></p>
+{% else %}
 <form action="/level5" method="post">
     <label>To</label>
     <input type="text" name="to">
@@ -14,6 +24,8 @@
     <input type="text" name="message">
     <input type="submit">
 </form>
+{% endif %}
+{% endif %}
 <ul>
     {% for message in result %}
         <li>

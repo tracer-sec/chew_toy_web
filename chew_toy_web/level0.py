@@ -3,5 +3,9 @@ from flask import render_template
 
 @app.route('/level0')
 def level0():
-    return render_template('index.html', message='FIRST_FLAG_HERE')
+    return render_template('message.html', message='Not here ...')
     
+@app.route('/hidden_level0_flag')
+def flag():
+    return render_template('message.html', message='FIRST FLAG HERE')
+
