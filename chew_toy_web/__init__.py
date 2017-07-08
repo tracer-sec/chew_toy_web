@@ -16,4 +16,5 @@ import chew_toy_web.level2
 import chew_toy_web.level3
 import chew_toy_web.level4
 import chew_toy_web.level5
+import chew_toy_web.level6
 

@@ -1,5 +1,5 @@
 __pycache__
 *.egg-info
 venv
-level5.db
+level*.db
 

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/level6/profile" method="post">
+    <label>Public</label>
+    <input type="text" name="public" value="{{ user.public }}">
+    <label>Private</label>
+    <input type="text" name="private" value="{{ user.private }}">
+    <input type="submit">
+    <input type="hidden" name="id" value="{{ user.id }}" />
+</form>
+<form action="/level6/password" method="post">
+    <label>Password</label>
+    <input type="password" name="password" value="{{ user.password }}">
+    <input type="submit">
+    <input type="hidden" name="id" value="{{ user.id }}" />
+</form>
+{% endblock %}
