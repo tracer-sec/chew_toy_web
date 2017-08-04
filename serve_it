@@ -6,4 +6,4 @@ if [ $# -gt 0 ]
         PORT=$1
 fi
 
-python chew_toy_web $PORT
+python chew_toy_web $PORT 0.0.0.0
