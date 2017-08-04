@@ -1,10 +1,11 @@
-from chew_toy_web import app, instance_id
+from chew_toy_web import app
+import chew_toy_web
 from flask import render_template, request, session, redirect
 import os
 import sqlite3
 
 def get_db():
-    filename = 'level6_' + instance_id + '.db'
+    filename = 'level6_' + chew_toy_web.instance_id + '.db'
     creating = not os.path.isfile(filename)
     conn = sqlite3.connect(filename)
     if creating:

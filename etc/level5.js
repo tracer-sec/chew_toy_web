@@ -1,12 +1,13 @@
 "use strict";
 
+var system = require('system');
 var page = require('webpage').create();
 
 setTimeout(function () {
     phantom.exit();
-}, 2000);
+}, 8000);
 
-page.open('http://localhost:5000/level5/login', 'post', 'username=admin&password=j6GM0bbCP8q9NQ1PotbZ1', function(status) {
+page.open('http://localhost:' + system.args[1] + '/level5/login', 'post', 'username=admin&password=j6GM0bbCP8q9NQ1PotbZ1', function(status) {
     if (status !== 'success') {
         phantom.exit();
     } else {
