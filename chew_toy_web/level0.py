@@ -3,7 +3,7 @@ from flask import render_template
 
 @app.route('/level0')
 def level0():
-    return render_template('message.html', message='Not here ...')
+    return render_template('message.html', message='Protected from robots ...')
     
 @app.route('/hidden_level0_flag')
 def flag():
