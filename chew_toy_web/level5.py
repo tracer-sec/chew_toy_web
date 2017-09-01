@@ -64,7 +64,8 @@ def level5_login():
     conn = get_db();
     c = conn.cursor()
     c.execute('SELECT password FROM users WHERE username = ?', (username,))
-    if password == c.fetchone()[0]:
+    row = c.fetchone()
+    if row is not None and password == row[0]:
         session['username'] = username
     return redirect('/level5')
 
