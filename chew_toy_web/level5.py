@@ -69,5 +69,5 @@ def level5_login():
     return redirect('/level5')
 
 def sneaky_xss_trigger():
-    subprocess.run(["etc/phantomjs", "etc/level5.js", chew_toy_web.instance_id], timeout=10)
+    subprocess.run(["etc/phantomjs", "etc/level5.js", chew_toy_web.instance_id], timeout=20)
     

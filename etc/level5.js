@@ -5,7 +5,7 @@ var page = require('webpage').create();
 
 setTimeout(function () {
     phantom.exit();
-}, 8000);
+}, 20000);
 
 page.open('http://localhost:' + system.args[1] + '/level5/login', 'post', 'username=admin&password=j6GM0bbCP8q9NQ1PotbZ1', function(status) {
     if (status !== 'success') {
